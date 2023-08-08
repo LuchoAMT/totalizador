@@ -12,3 +12,6 @@ npm test
 
 Ejecutar pruebas de unidad solo una vez:
 npm run test-once
+
+### Nueva Version:
+Se procedio a copiar el proyecto del magister en mi repositorio para poder hacer mis propios commits y aumentar la funcion multiplicar
