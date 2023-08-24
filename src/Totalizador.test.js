@@ -12,4 +12,8 @@ describe("Totalizaor", () => {
   it("Mostrar precio impuesto", () => {
     expect(metodos.calcularImpuesto(10,10,"CA")).toEqual(8.25);
   });
+
+  it("Mostrar precio total con impuesto", () => {
+    expect(metodos.calcularPrecioTotal(10,10,"CA")).toEqual(108.25);
+  });
 });
