@@ -8,4 +8,8 @@ describe("Totalizaor", () => {
   it("Mostrar precio neto", () => {
     expect(metodos.calcularPrecio(10,10)).toEqual(100);
   });
+
+  it("Mostrar precio impuesto", () => {
+    expect(metodos.calcularImpuesto(10,10,"CA")).toEqual(8.25);
+  });
 });

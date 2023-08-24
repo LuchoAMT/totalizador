@@ -24,6 +24,10 @@ function calcularPrecio(cant,precio){
   return cant*precio;
 }
 
-const metodos = {calcularPrecio, Totalizador};
+function calcularImpuesto(cant, precio, estado){
+  return calcularPrecio(cant,precio)*(Totalizador(estado)/100)
+}
+
+const metodos = {calcularPrecio, Totalizador,calcularImpuesto};
 
 export default metodos;
