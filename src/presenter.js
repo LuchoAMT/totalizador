@@ -1,4 +1,4 @@
-//import fizzbuzz from "./fizzbuzz"
+import Totalizador from "./Totalizador"
 
 const cantidad = document.querySelector("#cant-item");
 const precio = document.querySelector("#precio-x-item");
@@ -8,5 +8,6 @@ const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  div.innerHTML += "<p>La cantidad de items ingresada es: "+ cantidad.value +" con un precio de: " + precio.value + "estado seleccionado: " + estado.value + "</p>";
+  div.innerHTML += "<p>La cantidad de items ingresada es: "+ cantidad.value +
+  " con un precio de: " + precio.value + " </br> Estado seleccionado: " + estado.value + " porcentaje de impuestos: "+ Totalizador(estado.value) +  "%</p>";
 });
