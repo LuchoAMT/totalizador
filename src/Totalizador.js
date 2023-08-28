@@ -37,6 +37,9 @@ function calcularDescuento(precioT){
   if(precioT >= 1000 && precioT < 3000){
     return precioT*0.03;
   }
+  if(precioT >= 3000 && precioT < 7000){
+    return precioT*0.05;
+  }
   return precioT;
 }
 

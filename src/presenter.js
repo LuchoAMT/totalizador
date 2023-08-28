@@ -14,5 +14,6 @@ form.addEventListener("submit", (event) => {
    + "</br> impuesto para "+ estado.value +": " + metodos.calcularImpuesto(cantidad.value, precio.value,estado.value) 
    + "</br> Precio con impuesto: " + metodos.calcularPrecioTotal(cantidad.value, precio.value,estado.value)
    + "</br> Descuento: " + metodos.calcularDescuento(metodos.calcularPrecio(cantidad.value, precio.value))
+   + "</br> Precio Total: " + metodos.precioFinal(cantidad.value, precio.value, estado.value)
    + "</p>";
 });

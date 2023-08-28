@@ -21,4 +21,7 @@ describe("Totalizaor", () => {
     expect(metodos.calcularDescuento(1000)).toEqual(30);
   });
 
+  it("Mostrar descuento 3000 5%", () => {
+    expect(metodos.calcularDescuento(3000)).toEqual(150);
+  });
 });
