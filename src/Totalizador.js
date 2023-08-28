@@ -32,6 +32,19 @@ function calcularPrecioTotal(cant,precio,estado){
   return calcularPrecio(cant,precio)+calcularImpuesto(cant, precio, estado);
 }
 
-const metodos = {calcularPrecio, Totalizador,calcularImpuesto,calcularPrecioTotal};
+//descuento 1000 3%, 3000 5%, 7000 7%, 10000 10%, 30000 15%
+function calcularDescuento(precioT){
+  if(precioT >= 1000 && precioT < 3000){
+    return precioT*0.03;
+  }
+  return precioT;
+}
+
+function precioFinal(cant, precio, estado){
+  let precioImpuesto = calcularPrecioTotal(cant, precio, estado);
+  return precioImpuesto - calcularDescuento(cant*precio);
+}
+
+const metodos = {calcularPrecio, Totalizador,calcularImpuesto,calcularDescuento,calcularPrecioTotal, precioFinal};
 
 export default metodos;
