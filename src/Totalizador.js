@@ -47,6 +47,9 @@ function calcularDescuento(precioT){
   if(precioT >= 10000 && precioT < 30000){
     desc = precioT*0.1;
   }
+  if(precioT >= 30000){
+    desc = precioT*0.15;
+  }
   return desc;
 }
 
