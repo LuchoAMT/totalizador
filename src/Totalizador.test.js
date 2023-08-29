@@ -28,4 +28,8 @@ describe("Totalizaor", () => {
   it("Mostrar descuento 7000 7%", () => {
     expect(metodos.calcularDescuento(7000)).toBeCloseTo(490, 2);
   });
+
+  it("Mostrar descuento 10000 10%", () => {
+    expect(metodos.calcularDescuento(10000)).toEqual(1000);
+  });
 });
