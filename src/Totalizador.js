@@ -34,13 +34,17 @@ function calcularPrecioTotal(cant,precio,estado){
 
 //descuento 1000 3%, 3000 5%, 7000 7%, 10000 10%, 30000 15%
 function calcularDescuento(precioT){
+  let desc = 0;
   if(precioT >= 1000 && precioT < 3000){
-    return precioT*0.03;
+    desc = precioT*0.03;
   }
   if(precioT >= 3000 && precioT < 7000){
-    return precioT*0.05;
+    desc = precioT*0.05;
   }
-  return precioT;
+  if(precioT >= 7000 && precioT < 10000){
+    desc = precioT*0.07;
+  }
+  return desc;
 }
 
 function precioFinal(cant, precio, estado){
